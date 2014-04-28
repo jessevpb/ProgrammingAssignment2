@@ -1,14 +1,10 @@
-## Put comments here that give an overall description of what your
-## functions do
 ## These functions calculate and store the inverse of a matrix.
 ## This can save time and processing power when the matrices in question are large.
 
-## Write a short comment describing this function
 ## First function takes a square matrix and returns a list of functions.
 ## This list can be stored and the functions called using the $
 
 makeCacheMatrix <- function(x = matrix()) {
-
   if (nrow(x) != ncol(x)) { ## Check for square matrix
     print("Must be a square matrix.")
   }
@@ -26,12 +22,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
 ## Second function takes the first function as its argument and checks for a cached inverse.
 ## If none is stored, it calculates and stores the inverse.
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
   s <- x$getinverse() ## Pulls the "getinverse" function from previous result
   if(!is.null(s)) { ## If "getinverse" exists, returns inverse with a message that it is using cached data
     message("getting cached data")
